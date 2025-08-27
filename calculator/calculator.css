@@ -42,7 +42,7 @@ button:hover {
   background-color: #45a049;
 }
 
-/* .operand1,
+.operand1,
 .operand2 {
   width: 100%;
   padding: 8px;
@@ -53,4 +53,4 @@ input[type="number"] {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-} */
+}
