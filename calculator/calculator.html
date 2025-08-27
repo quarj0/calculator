@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <table id="calculator-table" class="data-table">
+            <thead>
+                <tr>
+                    <th>Operand 1</th>
+                    <th>Operand 2</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="operand1">Operand 1:</label><input
+                            type="number" id="operand1"
+                            placeholder="Enter operand 1"></td>
+                    <td><label for="operand2">Operand 2:</label><input
+                            type="number" id="operand2"
+                            placeholder="Enter operand 2"></td>
+                    <td><button onclick="calculateSum()">Calculate</button>
+                        <span id="result"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+        function calculateSum() {
+            var operand1 = document.getElementById("operand1").value;
+            var operand2 = document.getElementById("operand2").value;
+            var sum = parseInt(operand1) + parseInt(operand2);
+            document.getElementById("result").innerText = sum;
+        }
+    </script>
+    </body>
 </html>
